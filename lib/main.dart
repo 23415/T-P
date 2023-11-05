@@ -3,6 +3,9 @@ import 'package:training_and_placement_project/routes.dart';
 import 'package:training_and_placement_project/screen/loginscreen.dart';
 import 'package:training_and_placement_project/screen/signup.dart';
 
+import 'screen/homepage.dart';
+import 'utils/bottomnavigation.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -19,9 +22,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         // fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      initialRoute: "/login",
+      initialRoute: "/landing",
       routes: {
-        // Routes.homeroutes: (context) => Homepage(),
+        Routes.homeroutes: (context) => HomePage(),
+        Routes.landingroute: (context) => BottomNavBar(),
         Routes.loginroutes: (context) => LoginScreen(),
         // Routes.cartroutes: (context) => Cartpage(),
         // Routes.accountroutes: (context) => Accountpage(),
